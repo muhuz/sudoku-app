@@ -1,13 +1,16 @@
 import React from 'react';
-
-require('../solver/columnObject')
-require('../solver/dataObject')
-require('../solver/doublyLinkedList')
+import ColumnObject from '../solver/columnObject';
+import DataObject from '../solver/dataObject';
+import DoublyLinkedList from '../solver/doublyLinkedList';
 
 class SudokuSolver extends React.Component {
 
-    constructor() {
-        this.createCoverMatrix()
+    constructor(props) {
+        super(props);
+        this.state = {
+            solution: [],
+
+        }
     }
 
     // solve () {
